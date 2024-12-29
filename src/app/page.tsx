@@ -1,9 +1,8 @@
 import Image from 'next/image';
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
   return (
-    <div className="font-mono font-semibold">
-      <header className='flex flex-col items-center justify-center gap-2'>
+      <header className='font-mono font-semibold flex flex-col items-center justify-center gap-2'>
         <Image
           src="https://i.imgur.com/4YLbTtR.jpeg"
           alt="banner"
@@ -13,7 +12,5 @@ export default function Home({ children }: { children: React.ReactNode }) {
         />
         <p className='text-xl absolute bg-foreground text-background p-4 py-2 rounded-md opacity-80 hover:opacity-100'>&#64;rfsyhb&apos;s playground</p>
       </header>
-      {children}
-    </div>
   );
 }

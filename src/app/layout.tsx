@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        {/* note: children itu ./page atau ./folderLain */}
         {children}
       </body>
     </html>
