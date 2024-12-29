@@ -47,4 +47,18 @@ export const lessons: Lesson[] = [
       "I was wondered why the page doesn't fill, until i saw a '`' symbol after div tag.",
     url: 'https://www.betterup.com/blog/15-ways-to-improve-your-focus-and-concentration-skills',
   },
+  {
+    id: 7,
+    title: 'Only work in client component',
+    description:
+      "If using react hook `usePathname`, i need to mark the component as client only by adding 'use client'",
+    url: 'https://nextjs.org/docs/app/api-reference/directives/use-client',
+  },
+  {
+    id: 8,
+    title: 'UsePathname for Navigation',
+    description:
+      'To get the current path, use client component hook `usePathname` from `next/navigation` also if nested, i can get the first path check by adding `.startsWith(path)`.',
+    url: 'https://nextjs.org/docs/app/api-reference/functions/use-pathname',
+  },
 ];

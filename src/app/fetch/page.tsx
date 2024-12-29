@@ -1,7 +1,7 @@
 export default function FetchHome() {
   return (
-    <div className="font-fetch">
-      <p>Disisit</p>
-    </div>
+    <section className="font-sans">
+      <p>This is fetch main</p>
+    </section>
   )
 }
