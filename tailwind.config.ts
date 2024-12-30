@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        playground: "var(--playground)",
       },
       fontFamily: {
         sans: "var(--font-poppins)",

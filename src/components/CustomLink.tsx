@@ -14,7 +14,9 @@ const CustomLink: React.FC<customLinkProps> = ({
       href={url}
       target='_blank'
       rel='noreferrer'
-      className={`${customClass ? customClass : 'text-sm text-blue-400 hover:text-blue-500'} hover:underline`}
+      className={`${
+        customClass ? customClass : 'text-sm text-blue-400 hover:text-blue-500'
+      } hover:underline`}
     >
       {title}
     </a>

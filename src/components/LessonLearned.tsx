@@ -15,7 +15,9 @@ const LessonLearned: React.FC<LessonLearnedProps> = ({ lessons }) => {
             {problem.title}
           </h2>
           <p className='text-sm'>{problem.description}</p>
-          <CustomLink url={problem.url} title='read docs &#47; solution' />
+          <div className='inline-flex'>
+            <CustomLink url={problem.url} title='read docs &#47; solution' />
+          </div>
         </div>
       ))}
     </div>

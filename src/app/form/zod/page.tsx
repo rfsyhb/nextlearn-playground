@@ -33,7 +33,7 @@ export default function FormWithZod() {
   };
 
   return (
-    <section className='font-sans flex flex-col gap-4'>
+    <section className='font-sans flex flex-col gap-4 h-full justify-center w-full'>
       <code className='bg-gray-100 p-2 rounded text-sm text-gray-700'>
         npm install react-hook-form zod @hookform/resolvers
       </code>

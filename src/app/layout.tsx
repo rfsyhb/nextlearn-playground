@@ -43,13 +43,13 @@ export default function RootLayout({
               <LessonLearned lessons={lessons} />
             </div>
           </section>
-          <section className='font-semibold flex-[3] border border-white group'>
+          <section className='font-semibold flex-[3] border border-white group flex flex-col'>
             <h1 className='px-2 border-b text-xl group-hover:bg-white group-hover:text-black transition-all duration-500 ease-in-out'>
               Pages
             </h1>
-            <div className='px-2 font-normal'>
+            <div className='font-normal flex flex-col flex-grow'>
               <NavigationBar />
-              {children}
+              <div className='h-full flex bg-playground pb-2 px-2'>{children}</div>
             </div>
           </section>
         </main>
