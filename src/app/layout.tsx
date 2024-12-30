@@ -47,7 +47,7 @@ export default function RootLayout({
             <h1 className='px-2 border-b text-xl group-hover:bg-white group-hover:text-black transition-all duration-500 ease-in-out'>
               Pages
             </h1>
-            <div className='px-2'>
+            <div className='px-2 font-normal'>
               <NavigationBar />
               {children}
             </div>

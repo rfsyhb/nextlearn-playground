@@ -8,8 +8,8 @@ const NavigationBar = () => {
   const isActive = (path: string) => pathname === path;
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/fetch', label: 'Fetch' },
-    { href: '/fetch/tanstack', label: 'Fetch Tanstack' },
+    { href: '/fetch/tanstack', label: 'fetchTanstack' },
+    { href: '/form/zod', label: 'formWithZod' },
   ];
 
   return (

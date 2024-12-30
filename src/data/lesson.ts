@@ -61,4 +61,25 @@ export const lessons: Lesson[] = [
       'To get the current path, use client component hook `usePathname` from `next/navigation` also if nested, i can get the first path check by adding `.startsWith(path)`.',
     url: 'https://nextjs.org/docs/app/api-reference/functions/use-pathname',
   },
+  {
+    id: 9,
+    title: 'Zod Schema-based Validation',
+    description:
+      'Zod is integrated with TypeScript. Not just for form handling but also for input validation API Route and data fetching validation,',
+    url: 'https://zod.dev/',
+  },
+  {
+    id: 10,
+    title: 'React Hook Form',
+    description:
+      'Is a library for form handling, performant, removing the need to re-render the whole form.',
+    url: 'https://react-hook-form.com/',
+  },
+  {
+    id: 11,
+    title: 'Error useForm',
+    description:
+      'If using `useForm` in the component, i need to add `use client` to the top of the file.',
+    url: 'https://stackoverflow.com/questions/71746969/useform-and-react-hook-form-is-giving-problems-with-i-use-it-with-nextjs',
+  },
 ];
