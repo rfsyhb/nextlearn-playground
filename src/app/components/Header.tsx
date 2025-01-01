@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CustomLink from './CustomLink';
+import CustomLink from '@/components/CustomLink';
 
 export default function Header() {
   return (

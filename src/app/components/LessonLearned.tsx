@@ -1,5 +1,5 @@
 import { Lesson } from '@/data/lesson';
-import CustomLink from './CustomLink';
+import CustomLink from '@/components/CustomLink';
 
 type LessonLearnedProps = {
   lessons: Lesson[];

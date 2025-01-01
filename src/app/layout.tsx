@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { JetBrains_Mono, Poppins } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
-import LessonLearned from '@/components/LessonLearned';
+import Header from './components/Header';
+import LessonLearned from './components/LessonLearned';
 import { lessons } from '@/data/lesson';
-import NavigationBar from '@/components/NavigationBar';
+import NavigationBar from './components/NavigationBar';
 
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
