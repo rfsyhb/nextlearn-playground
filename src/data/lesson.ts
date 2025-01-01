@@ -103,4 +103,10 @@ export const lessons: Lesson[] = [
       'Middleware in NextJS is edge-based, so it runs on the edge server not nodejs. To use jsonwebtoken, i need to use `nodejs` runtime that is in route.ts.',
     url: 'https://nextjs.org/docs/messages/node-module-in-edge-runtime',
   },
+  {
+    id: 15,
+    title: 'Symbol `?` in TypeScript',
+    description: 'The symbol `?` in TypeScript is for optional properties. So i can use it for optional parameter in function.',
+    url: 'https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties',
+  }
 ];
