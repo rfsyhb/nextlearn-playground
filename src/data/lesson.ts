@@ -82,4 +82,25 @@ export const lessons: Lesson[] = [
       'If using `useForm` in the component, i need to add `use client` to the top of the file.',
     url: 'https://stackoverflow.com/questions/71746969/useform-and-react-hook-form-is-giving-problems-with-i-use-it-with-nextjs',
   },
+  {
+    id: 12,
+    title: 'NextJS Backend JWT',
+    description:
+      'NextJS Route Handler runs on server environment nodejs, so i can use JWT for authentication.',
+    url: 'https://nextjs.org/docs/app/building-your-application/routing/route-handlers',
+  },
+  {
+    id: 13,
+    title: 'Middleware',
+    description:
+      'NextJS have middleware for route handler. I must create `middleware.ts` in root folder.',
+    url: 'https://nextjs.org/docs/app/building-your-application/routing/middleware',
+  },
+  {
+    id: 14,
+    title: 'Middleware edge-based',
+    description:
+      'Middleware in NextJS is edge-based, so it runs on the edge server not nodejs. To use jsonwebtoken, i need to use `nodejs` runtime that is in route.ts.',
+    url: 'https://nextjs.org/docs/messages/node-module-in-edge-runtime',
+  },
 ];
