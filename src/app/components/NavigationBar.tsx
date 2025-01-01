@@ -13,7 +13,7 @@ const NavigationBar = () => {
   ];
 
   return (
-    <nav className='overflow-auto px-2'>
+    <nav className='overflow-x-auto px-2 overflow-hidden'>
       <ul className='flex flex-row gap-1'>
         {links.map(({ href, label }) => (
           <li key={href}>

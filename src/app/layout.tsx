@@ -34,7 +34,8 @@ export default function RootLayout({
       >
         <Header />
         <main className='font-mono flex flex-row gap-2 mt-1 flex-grow overflow-hidden'>
-          <section className='font-semibold flex-[1] flex flex-col gap-1 border border-white group'>
+          {/* Lesson Learned Section */}
+          <section className='font-semibold flex-shrink-0 flex-grow-0 basis-1/4 border flex flex-col border-white group'>
             <h1 className='px-2 border-b text-xl group-hover:bg-white group-hover:text-black transition-all duration-500 ease-in-out'>
               {' '}
               Lesson Learned
@@ -43,13 +44,16 @@ export default function RootLayout({
               <LessonLearned lessons={lessons} />
             </div>
           </section>
-          <section className='font-semibold flex-[3] border border-white group flex flex-col'>
+          {/* Pages Section */}
+          <section className='font-semibold flex-grow basis-3/4 border border-white group flex flex-col overflow-hidden'>
             <h1 className='px-2 border-b text-xl group-hover:bg-white group-hover:text-black transition-all duration-500 ease-in-out'>
               Pages
             </h1>
             <div className='font-normal flex flex-col flex-grow'>
               <NavigationBar />
-              <div className='h-full flex bg-playground pb-2 px-2'>{children}</div>
+              <div className='h-full flex bg-playground pb-2 px-2'>
+                {children}
+              </div>
             </div>
           </section>
         </main>
