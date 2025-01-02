@@ -14,7 +14,7 @@ type Comment = {
 // Fetch comments from the server
 const fetchComments = async () => {
   const response = await apiRequest<ApiResponse<Comment[]>>({
-    url: '/api/supabase/comment',
+    url: '/supabase/comment',
     method: 'GET',
   });
 

@@ -145,4 +145,10 @@ export const lessons: Lesson[] = [
       'In Next.js, the QueryClient should be created inside a component using useState to ensure a single instance is maintained across renders. Unlike in a React Vite project, where QueryClient can be declared globally because everything runs client-side, creating it outside a component in Next.js can lead to multiple instances being created, especially during hydration or remounts.',
     url: 'https://tanstack.com/query/latest/docs/eslint/stable-query-client',
   },
+  {
+    id: 21,
+    title: 'Axios Instance BaseURL',
+    description: 'In the axios instance, i set the baseURL to `/api`. Because in the Next.js project, the API routes are in the `/api` folder.',
+    url: 'https://axios-http.com/docs/instance',
+  }
 ];
