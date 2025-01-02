@@ -106,7 +106,43 @@ export const lessons: Lesson[] = [
   {
     id: 15,
     title: 'Symbol `?` in TypeScript',
-    description: 'The symbol `?` in TypeScript is for optional properties. So i can use it for optional parameter in function.',
+    description:
+      'The symbol `?` in TypeScript is for optional properties. So i can use it for optional parameter in function.',
     url: 'https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties',
-  }
+  },
+  {
+    id: 16,
+    title: 'Prefix NEXT_PUBLIC_',
+    description:
+      'Any environment variable that starts with `NEXT_PUBLIC_` will be exposed to the browser (browser/client-side).',
+    url: 'https://nextjs.org/docs/basic-features/environment-variables',
+  },
+  {
+    id: 17,
+    title: 'Not using NEXT_PUBLIC_',
+    description:
+      'If not using `NEXT_PUBLIC_`, the environment variable will only be available in the server. Its only available in the server runtime: `getServerSideProps`, `getStaticProps`, and API Routes.',
+    url: 'https://nextjs.org/docs/basic-features/environment-variables',
+  },
+  {
+    id: 18,
+    title: 'React Query: QueryClientProvider',
+    description:
+      "In nextjs project, i create a `ClientProvider` component that wraps the `QueryClientProvider` from `@tanstack/react-query`. So i can use 'use client' not in the root layout.",
+    url: 'https://tanstack.com/query/latest/docs/framework/react/reference/QueryClientProvider#queryclientprovider',
+  },
+  {
+    id: 19,
+    title: 'React Query: useQuery for invalidation',
+    description:
+      'In the component, i can use `useQueryClient` to get the query client and invalidate the query by calling `queryClient.invalidateQueries`.',
+    url: 'https://tanstack.com/query/latest/docs/framework/react/reference/useQueryClient',
+  },
+  {
+    id: 20,
+    title: 'Next.js: Using useState for QueryClient',
+    description:
+      'In Next.js, the QueryClient should be created inside a component using useState to ensure a single instance is maintained across renders. Unlike in a React Vite project, where QueryClient can be declared globally because everything runs client-side, creating it outside a component in Next.js can lead to multiple instances being created, especially during hydration or remounts.',
+    url: 'https://tanstack.com/query/latest/docs/eslint/stable-query-client',
+  },
 ];

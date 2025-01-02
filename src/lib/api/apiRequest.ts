@@ -1,6 +1,11 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import axiosInstance from './axiosInstance';
 
+export type ApiResponse<T> = {
+  status: 'success' | 'error';
+  data?: T;
+};
+
 interface ApiRequestConfig extends AxiosRequestConfig {
   // Custom configuration options
   requireAuth?: boolean;
