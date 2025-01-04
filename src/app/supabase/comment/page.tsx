@@ -1,6 +1,5 @@
 'use client';
 
-import SectionWrapper from '@/app/components/SectionWrapper';
 import apiRequest, { ApiResponse } from '@/lib/api/apiRequest';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 
@@ -37,7 +36,7 @@ export default function CommentPage() {
   };
 
   return (
-    <SectionWrapper>
+    <>
       <code className='bg-gray-100 p-2 rounded text-sm text-gray-700'>
         npm i @tanstack/react-query @tanstack/react-query-devtools
         @supabase/supabase-js
@@ -55,6 +54,6 @@ export default function CommentPage() {
         )}
         <button onClick={handleInvalidate} className='mt-2 border px-2 py-1 hover:bg-foreground hover:text-background'>Invalidate (refetch)</button>
       </div>
-    </SectionWrapper>
+    </>
   );
 }

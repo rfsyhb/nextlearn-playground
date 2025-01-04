@@ -148,7 +148,22 @@ export const lessons: Lesson[] = [
   {
     id: 21,
     title: 'Axios Instance BaseURL',
-    description: 'In the axios instance, i set the baseURL to `/api`. Because in the Next.js project, the API routes are in the `/api` folder.',
+    description:
+      'In the axios instance, i set the baseURL to `/api`. Because in the Next.js project, the API routes are in the `/api` folder.',
     url: 'https://axios-http.com/docs/instance',
-  }
+  },
+  {
+    id: 22,
+    title: 'Middleware doenst triggered',
+    description:
+      'Instead of [root]/middleware.ts, i need to put the middleware in [root]/src/middleware.ts.',
+    url: 'https://stackoverflow.com/questions/73040090/nextjs-middleware-does-not-seem-to-be-triggered',
+  },
+  {
+    id: 23,
+    title: 'NextRouter was not mounted',
+    description:
+      'Because im using app directory, i need to use `useRouter` from `next/navigation` (new hooks).',
+    url: 'https://nextjs.org/docs/messages/next-router-not-mounted',
+  },
 ];

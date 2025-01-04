@@ -10,7 +10,9 @@ const NavigationBar = () => {
     { href: '/', label: 'Home' },
     { href: '/form/zod', label: 'form/zod' },
     { href: '/supabase/comment', label: 'supabase/comment' },
-    { href: '/supabase/protected/lesson', label: 'supabase/protected/lesson' },
+    { href: '/supabase/auth/login', label: 'supabase/auth/login' },
+    { href: '/supabase/protected/admin', label: 'supabase/protected/admin' },
+    { href: '/supabase/protected/user', label: 'supabase/protected/user' },
   ];
 
   return (
