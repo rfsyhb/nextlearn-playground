@@ -37,7 +37,7 @@ export async function middleware(req: NextRequest) {
   // Proteksi untuk /user
   if (
     req.nextUrl.pathname.startsWith('/supabase/protected/user') &&
-    role !== 'superman'
+    (role !== 'superman' && role !=='user')
   ) {
     return NextResponse.redirect(new URL('/supabase/protected/admin', req.url));
   }

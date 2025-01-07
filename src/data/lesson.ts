@@ -166,4 +166,11 @@ export const lessons: Lesson[] = [
       'Because im using app directory, i need to use `useRouter` from `next/navigation` (new hooks).',
     url: 'https://nextjs.org/docs/messages/next-router-not-mounted',
   },
+  {
+    id: 24,
+    title: 'Supabase RLS Policy "to Authenticated"',
+    description:
+      'To able pass the Policy, in API Route, i need to add `global.headers.Authorization: Bearer ${token}` in the Supabase Client.',
+    url: 'https://supabase.com/docs/guides/functions/auth',
+  },
 ];

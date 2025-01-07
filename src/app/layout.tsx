@@ -23,6 +23,15 @@ export const metadata: Metadata = {
   description: 'playground to learn and experiment',
 };
 
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/form/zod', label: 'form/zod' },
+  { href: '/supabase/comment', label: 'supabase/comment' },
+  { href: '/supabase/auth/login', label: 'supabase/auth/login' },
+  { href: '/supabase/protected/admin', label: 'supabase/protected/admin' },
+  { href: '/supabase/protected/user', label: 'supabase/protected/user' },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,7 +61,7 @@ export default function RootLayout({
                 Pages
               </h1>
               <div className='font-normal flex flex-col flex-grow'>
-                <NavigationBar />
+                <NavigationBar links={links} />
                 <div className='h-full flex bg-playground pb-2 px-2'>
                   {children}
                 </div>
