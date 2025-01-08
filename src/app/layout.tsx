@@ -6,6 +6,7 @@ import LessonLearned from './components/LessonLearned';
 import { lessons } from '@/data/lesson';
 import NavigationBar from './components/NavigationBar';
 import ClientProvider from './components/ClientProvider';
+import { Suspense } from 'react';
 
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
@@ -63,7 +64,9 @@ export default function RootLayout({
               <div className='font-normal flex flex-col flex-grow'>
                 <NavigationBar links={links} />
                 <div className='h-full flex bg-playground pb-2 px-2'>
-                  {children}
+                  <Suspense fallback={<div>Loading...</div>}>
+                    {children}
+                  </Suspense>
                 </div>
               </div>
             </section>

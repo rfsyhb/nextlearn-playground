@@ -180,4 +180,11 @@ export const lessons: Lesson[] = [
       'In an API route, using a try-catch block is crucial for handling unexpected errors that might occur on the server. Even if i use Supabase and handle errors explicitly with `if (error)`, a try-catch block is still needed to catch other runtime errors (e.g., missing environment variables, library misconfigurations, or network issues). This ensures the server does not crash and always returns a proper error response.',
     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch',
   },
+  {
+    id: 26,
+    title: '`Priority` property in Image Component',
+    description:
+      'The `priority` property in the Image component is used to tell Next.js to load the image immediately.',
+    url: 'https://nextjs.org/docs/pages/api-reference/components/image#priority',
+  },
 ];
