@@ -173,4 +173,11 @@ export const lessons: Lesson[] = [
       'To able pass the Policy, in API Route, i need to add `global.headers.Authorization: Bearer ${token}` in the Supabase Client.',
     url: 'https://supabase.com/docs/guides/functions/auth',
   },
+  {
+    id: 25,
+    title: 'The Importance of Try-Catch Block in API Routes',
+    description:
+      'In an API route, using a try-catch block is crucial for handling unexpected errors that might occur on the server. Even if i use Supabase and handle errors explicitly with `if (error)`, a try-catch block is still needed to catch other runtime errors (e.g., missing environment variables, library misconfigurations, or network issues). This ensures the server does not crash and always returns a proper error response.',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch',
+  },
 ];

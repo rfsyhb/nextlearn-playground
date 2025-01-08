@@ -50,6 +50,25 @@ export default function LoginPage() {
     }
   };
 
+  // Handling Logout
+  const onLogout = async () => {
+    try {
+      const response = await apiRequest({
+        url: '/supabase/auth/logout',
+        method: 'POST',
+      });
+
+      console.log(response);
+      router.push('/supabase/auth/login');
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError('An unknown error occurred');
+      }
+    }
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-2'>
@@ -105,6 +124,10 @@ export default function LoginPage() {
           >
             Reset
           </button>
+          <button
+            onClick={onLogout}
+            className='border border-foreground px-4 py-1 bg-red-700 hover:bg-red-800'
+          >Logout</button>
         </div>
       </form>
     </>

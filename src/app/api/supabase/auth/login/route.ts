@@ -31,6 +31,11 @@ export async function POST(req: NextRequest) {
       { status: 200 },
     );
 
+    // Delete existing cookies
+    response.cookies.delete({ name: 'supabase-auth-token', path: '/' });
+    response.cookies.delete({ name: 'supabase-refresh-token', path: '/' });
+
+    // Set new cookies
     response.cookies.set('supabase-auth-token', access_token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
@@ -52,11 +57,11 @@ export async function POST(req: NextRequest) {
         { status: 'fail', message: error.message },
         { status: 500 },
       );
+    } else {
+      return NextResponse.json(
+        { status: 'fail', message: 'An unknown error occurred' },
+        { status: 500 },
+      );
     }
-
-    return NextResponse.json(
-      { status: 'fail', message: 'An unknown error occurred' },
-      { status: 500 },
-    );
   }
 }
