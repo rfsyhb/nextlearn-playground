@@ -11,7 +11,7 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get('supabase-auth-token')?.value;
 
   if (!token) {
-    return NextResponse.redirect(new URL('/supabase/auth/login', req.url));
+    return NextResponse.redirect(new URL('/supabase/auth/login?error=unauthorized', req.url));
   }
 
   // Validasi token
@@ -20,7 +20,7 @@ export async function middleware(req: NextRequest) {
     error,
   } = await supabase.auth.getUser(token);
   if (error || !user) {
-    return NextResponse.redirect(new URL('/supabase/auth/login', req.url));
+    return NextResponse.redirect(new URL('/supabase/auth/login?error=invalid-token', req.url));
   }
 
   // console.log(user);
@@ -31,7 +31,7 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname.startsWith('/supabase/protected/admin') &&
     role !== 'admin'
   ) {
-    return NextResponse.redirect(new URL('/supabase/protected/user', req.url));
+    return NextResponse.redirect(new URL('/supabase/protected/user?error=user+role', req.url));
   }
 
   // Proteksi untuk /user
@@ -39,7 +39,7 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname.startsWith('/supabase/protected/user') &&
     (role !== 'superman' && role !=='user')
   ) {
-    return NextResponse.redirect(new URL('/supabase/protected/admin', req.url));
+    return NextResponse.redirect(new URL('/supabase/protected/admin?error=admin+role', req.url));
   }
 
   return NextResponse.next();
