@@ -61,7 +61,7 @@ export default function UserLessonPage() {
 
   const onSubmit = async (data: LessonFormInputs) => {
     try {
-      const response = await apiRequest<{ status: string, message: string}>({
+      const response = await apiRequest<{ status: string; message: string }>({
         url: '/supabase/protected/lesson',
         method: 'POST',
         data,
@@ -76,11 +76,12 @@ export default function UserLessonPage() {
         reset();
         queryClient.invalidateQueries({ queryKey: ['lessons'] });
       }
-    } catch (err: unknown) {
-      if (err instanceof Error) {
-        setError(err.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError('An unknown error occurred');
       }
-      setError('An unknown error occurred');
     }
   };
 
